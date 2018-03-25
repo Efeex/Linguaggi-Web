@@ -1,0 +1,80 @@
+html, body {
+  height: 100%; }
+
+p {
+  color: #fff; }
+  @supports (mix-blend-mode: screen) {
+    p {
+      mix-blend-mode: screen;
+      position: relative; }
+      p::after {
+        background: linear-gradient(180deg, transparent, #000 3rem) no-repeat bottom center/100% 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s ease-out; }
+      p:hover::after {
+        background-size: 100% 0%; } }
+
+.wrapper {
+  background: #222 url(https://www.nasa.gov/sites/default/files/thumbnails/image/p1639ay-goodss-160930.jpg) 50% 50%/cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 18px/1.5 'Futura', sans-serif;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative; }
+
+.content {
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+  position: relative; }
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center; }
+
+.fa {
+  font-size: 50px !important;
+  position: absolute; }
+
+.fa-arrow-circle-left {
+  left: 50px; }
+
+.fa-arrow-circle-right {
+  right: 50px; }
+
+.color-change h1 {
+  color: transparent; }
+  @media (min-width: 768px) {
+    .color-change h1 {
+      color: #666666; } }
+  @media (min-width: 992px) {
+    .color-change h1 {
+      color: #b3b3b3; } }
+  @media (min-width: 1200px) {
+    .color-change h1 {
+      color: #fff; } }
+
+.color-change i {
+  color: #fff; }
+  @media (min-width: 768px) {
+    .color-change i {
+      color: #b3b3b3; } }
+  @media (min-width: 992px) {
+    .color-change i {
+      color: #666666; } }
+  @media (min-width: 1200px) {
+    .color-change i {
+      color: transparent; } }
